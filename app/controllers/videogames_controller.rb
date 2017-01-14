@@ -69,6 +69,6 @@ class VideogamesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def videogame_params
-      params.fetch(:videogame, {})
+      params.require(:videogame).permit(:platform_id, :distribution_id, :title)
     end
 end
