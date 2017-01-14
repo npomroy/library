@@ -69,6 +69,6 @@ class PlatformsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def platform_params
-      params.fetch(:platform, {})
+      params.require(:platform).permit(:title)
     end
 end
