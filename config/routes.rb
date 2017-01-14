@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :platforms
   resources :videogames
   root to: 'pages#home'
   devise_for :users
