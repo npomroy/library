@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170114000306) do
+ActiveRecord::Schema.define(version: 20170114010752) do
 
   create_table "profiles", force: :cascade do |t|
     t.string   "first_name"
@@ -45,10 +45,10 @@ ActiveRecord::Schema.define(version: 20170114000306) do
 
   create_table "videogames", force: :cascade do |t|
     t.string   "title"
-    t.integer  "platform"
-    t.integer  "distribution"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.integer  "platform_id"
+    t.integer  "distribution_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end
