@@ -1,25 +1,15 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Platforms</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @platforms.each do |platform| %>
-      <tr>
-        <td><%= link_to 'Show', platform %></td>
-        <td><%= link_to 'Edit', edit_platform_path(platform) %></td>
-        <td><%= link_to 'Destroy', platform, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Platform', new_platform_path %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <h1 class="text-center">Platforms</h1>
+      <% @platforms.each do |platform| %>
+        <%= link_to platform do %>
+            <div class="well">
+              <h4 class="text-center"><%= platform.title %></h4>
+            </div>
+        <% end %> 
+      <% end %>
+      <%= link_to 'New Platform', new_platform_path %>
+    </div>
+  </div>
+</div>
